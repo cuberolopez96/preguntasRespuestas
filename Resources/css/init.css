@@ -1,0 +1,38 @@
+@font-face{
+	font-family: 'Lemonada-font';
+	src:url(../fonts/Lemonada/Lemonada-Regular.ttf);
+}
+*{
+	padding: 0;
+	margin:0;
+	--color-principal: #3f51b5;
+	--color-secundario:#c1292e;
+}
+header{
+	width: 100%;
+	background: var(--color-principal);
+	line-height: 3em;
+	color: white;
+	text-indent: 1em;
+	font-family: 'Lemonada-font';
+}
+table{
+	width: 90%;
+	margin:5% 5%;
+	border-collapse: collapse;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+table tr{
+	line-height: 2em;
+}
+table tr.row-header{
+	background: var(--color-secundario);
+	color: white;
+	font-family: 'Lemonada-font';
+}
+table td{
+	text-align: center;
+}
+table th,td{
+	border: 2px solid rgba(0,0,0,0.3);
+}
