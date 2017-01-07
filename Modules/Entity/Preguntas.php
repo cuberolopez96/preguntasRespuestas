@@ -6,6 +6,7 @@ class Pregunta
 {
 	private $enunciado;
 	private $pdo;
+
 	public function setEnunciado($enunciado){
 		$this->enunciado=$enunciado;
 		return $this;

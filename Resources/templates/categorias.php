@@ -1,4 +1,5 @@
 <?php 
+comprobarPermisos();
 $categorias = Categoria::getCategorias();
 $vcategorias = array_reverse($categorias);
  ?>

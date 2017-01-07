@@ -1,6 +1,8 @@
 <?php 
+comprobarPermisos();
 $preguntas = Pregunta::getPreguntas();
 $vpreguntas = array_reverse($preguntas);
+
  ?>
 <div>
 	<header>

@@ -10,14 +10,26 @@
 	--color-secundario:#c1292e;
 
 }
-
+a{
+	text-decoration: none;
+	color: var(--color-principal);
+}
 body,html{
 	width: 100%;
 	height: 100%;
 }
+.btn{
+	margin: 5% 5%;
+	padding: 1em 2em;
+	background: var(--color-principal);
+	border:none;
+	font-family: 'Lemonada-font';
+	color: white;
+
+}
 .card{
 	display: inline-block;
-	width:19%;
+	width:90%;
 	margin:2% 2%;
 	box-shadow: 2px 2px 1px rgba(0,0,0,1);
 }
@@ -25,6 +37,20 @@ body,html{
 	width: 100%;
 
 }
+label{
+	display: block;
+	color: var(--color-principal);
+	font-size: 2em;
+	margin: 0 5%;
+	font-family: 'Lemonada-font';
+}
+input[type=text],input[type=password]{
+	width:90%;
+	line-height: 2em;
+	margin: 0 5%;
+	border: 1px solid black;
+}
+
 header{
 	width: 100%;
 	background: var(--color-principal);
@@ -87,4 +113,9 @@ nav.tabs ul li a {
 	width: 100%;
 	text-align: center;
 	color:white;
+}
+@media screen and (min-width: 900px){
+	div.card{
+		width:20%;
+	}
 }
