@@ -5,10 +5,16 @@
 class Pregunta 
 {
 	private $enunciado;
+	private $categoria;
 	private $pdo;
 
 	public function setEnunciado($enunciado){
 		$this->enunciado=$enunciado;
+		return $this;
+	}
+	public function setCategoria($categoria){
+		$this->categoria = $categoria;
+
 		return $this;
 	}
 	public function getEnunciado(){
@@ -22,12 +28,15 @@ class Pregunta
 	}
 	public function save(){
 		$enunciado=$this->enunciado;
-		$this->pdo->exec("INSERT INTO preguntas(enunciado) VALUES('$enunciado')");
+		$categoria = $this->categoria;
+		
+		$this->pdo->exec("INSERT INTO preguntas(enunciado,categoria) VALUES('$enunciado','$categoria')");
 	}
-	function __construct($enunciado)
+	function __construct($enunciado,$categoria)
 	{
 		$this->pdo = new ConnectDB();
-		$this->setEnunciado($enunciado)->save();
+
+		$this->setEnunciado($enunciado)->setCategoria($categoria)->save();
 	}
 
 }
