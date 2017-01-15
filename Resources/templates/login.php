@@ -10,7 +10,7 @@ if(isset($_POST['login'])){
 	}
 	if($bandera == true){
 		foreach ($usuarios as $key => $usuario) {
-			if ($usuario['username']==$_POST['username']&&$usuario['password']==md5($_POST['password'])) {
+			if ($usuario['usuario']==$_POST['username']&&$usuario['password']==md5($_POST['password'])) {
 				$_SESSION['usuario']= $usuario;
 				header('Location: index.php');
 			}

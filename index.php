@@ -5,6 +5,7 @@ require_once "Modules/Entity/ConnectDB.php";
 require_once "Modules/Entity/Preguntas.php";
 require_once "Modules/Entity/Categorias.php";
 require_once "Modules/Entity/Usuarios.php";
+require_once "Modules/Entity/Respuestas.php";
 require_once "Modules/functions.php";
 cargarVariablesSesion();
 

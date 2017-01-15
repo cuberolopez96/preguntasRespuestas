@@ -17,7 +17,8 @@ $vpreguntas = array_reverse($preguntas);
 			<img src="Resources/imagenes/foto.png" alt="">
 			<div class="card-content">
 				<header>
-					<h4><?php echo $pregunta['enunciado']; ?></h4>
+					<h4><?php echo $pregunta['pregunta']; ?></h4>
+					<a href=<?php echo "index.php?page=verpregunta&id=$pregunta[id]" ?> class="right">Ver</a>
 				</header>
 			</div>
 		</div>

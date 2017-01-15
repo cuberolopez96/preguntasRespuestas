@@ -16,7 +16,8 @@ $vcategorias = array_reverse($categorias);
 				<img src="Resources/imagenes/foto.png" alt="">
 				<div>
 					<header>
-						<h4><?php echo $categoria['nombre'] ?></h4>
+						<h4><?php echo $categoria['categoria'] ?></h4>
+						<a href=<?php echo "index.php?page=vercategoria&id=".$categoria['categoria'] ?> class="right">Ver</a>
 					</header>
 				</div>
 

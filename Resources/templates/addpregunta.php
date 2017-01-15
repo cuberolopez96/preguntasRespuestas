@@ -1,5 +1,7 @@
 <?php 
 $categorias = Categoria::getCategorias();
+$lastId = Pregunta::giveLastId();
+print_r($lastId);
 if (isset($_POST['add'])) {
 	$bandera = true;
 	if (!isset($_POST['enunciado'])) {
@@ -23,9 +25,14 @@ if (isset($_POST['add'])) {
 			<label for="">Selecciona la categoría</label>
 			<select name="categoria" id="">
 				<?php foreach ($categorias as $key => $categoria): ?>
-					<option value="<?php echo $categoria['id']; ?>"><?php echo $categoria['nombre']; ?></option>
+					<option value="<?php echo $categoria['categoria']; ?>"><?php echo $categoria['categoria']; ?></option>
 				<?php endforeach ?>
 			</select>
+			<label for="">Escribe la Respuesta Correcta</label>
+			<input type="text" name="respuestacorrecta">
+			<label for="">Escribe dos Respuestas para despistar</label>
+			<input type="text" name="respuesta1">
+			<input type="text" name="respuesta2">
 			<input type="submit" name="add"
 			class="btn" value="add">
 			

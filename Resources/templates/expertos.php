@@ -6,12 +6,7 @@ $vexpertos = array_reverse($expertos);
 <div class="row">
 	<header>
 		<h3>Expertos</h3>
-		<?php if ($_SESSION['usuario']['role']=="ADMIN"): ?>
-			<a href="index.php?page=register" class="right">
-				<i class="fa fa-plus" aria-hidden="true"></i>
-			</a>
-			
-		<?php endif ?>
+		
 	</header>
 	<div>
 		<?php foreach ($vexpertos as $key => $experto): ?>
@@ -19,7 +14,7 @@ $vexpertos = array_reverse($expertos);
 				<img src="Resources/imagenes/foto.png" alt="">
 				<div class="card-content">
 					<header>
-						<h4><?php echo $experto['username']; ?></h4>
+						<h4><?php echo $experto['usuario']; ?></h4>
 					</header>
 				</div>
 			</div>
